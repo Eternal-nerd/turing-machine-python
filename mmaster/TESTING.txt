@@ -1,0 +1,239 @@
+PS E:\SCHOOL FALL 2022\Theory of Computation\project-1\mmaster> python .\turing.py
+Example string: aaaaabbbbbccccc, Turing machine is tripletm from MonoTMExamples.hs  
+showTM Test: 
+Name:         triplet
+States:       [1, 2, 3, 4, 5, 6]
+Alphabet:     'abc'
+Tape symbols: 'abc* !'
+Blank:        ' '
+Leftend:      '!'
+Transitions:  [
+                1 === ' ' / ' ' R ===> 6,
+                1 === '*' / '*' R ===> 1,
+                1 === 'a' / '*' R ===> 2,
+                2 === 'a' / 'a' R ===> 2,
+                2 === '*' / '*' R ===> 2,
+                2 === 'b' / '*' R ===> 3,
+                3 === 'b' / 'b' R ===> 3,
+                3 === '*' / '*' R ===> 3,
+                3 === 'c' / '*' R ===> 4,
+                4 === 'c' / 'c' R ===> 4,
+                4 === '*' / '*' R ===> 4,
+                4 === ' ' / ' ' L ===> 5,
+                5 === 'a' / 'a' L ===> 5,
+                5 === 'b' / 'b' L ===> 5,
+                5 === 'c' / 'c' L ===> 5,
+                5 === '*' / '*' L ===> 5,
+                5 === '!' / '!' R ===> 1]
+Start state:  1
+Final states: [6]
+
+
+
+
+showConfig and initialConfig Test:
+Turing machine:           triplet
+Current state:            1
+Tape contents:            ['!', 'a', 'a', 'a', 'a', 'a', 'b', 'b', 'b', 'b', 'b', 'c', 'c', 'c', 'c', 'c']
+Read head location:       1
+
+
+
+
+
+showHistory and configs Test:
+ERROR: TRANSITION NOT FOUND (in final state or does not match)
+[
+TM: triplet, Current state: 1, Tape contents: !aaaaabbbbbccccc, Read head location: 1, ,
+TM: triplet, Current state: 2, Tape contents: !*aaaabbbbbccccc, Read head location: 2, ,
+TM: triplet, Current state: 2, Tape contents: !*aaaabbbbbccccc, Read head location: 3, ,
+TM: triplet, Current state: 2, Tape contents: !*aaaabbbbbccccc, Read head location: 4, ,
+TM: triplet, Current state: 2, Tape contents: !*aaaabbbbbccccc, Read head location: 5, ,
+TM: triplet, Current state: 2, Tape contents: !*aaaabbbbbccccc, Read head location: 6, ,
+TM: triplet, Current state: 3, Tape contents: !*aaaa*bbbbccccc, Read head location: 7, ,
+TM: triplet, Current state: 3, Tape contents: !*aaaa*bbbbccccc, Read head location: 8, ,
+TM: triplet, Current state: 3, Tape contents: !*aaaa*bbbbccccc, Read head location: 9, ,
+TM: triplet, Current state: 3, Tape contents: !*aaaa*bbbbccccc, Read head location: 10, ,
+TM: triplet, Current state: 3, Tape contents: !*aaaa*bbbbccccc, Read head location: 11, ,
+TM: triplet, Current state: 4, Tape contents: !*aaaa*bbbb*cccc, Read head location: 12, ,
+TM: triplet, Current state: 4, Tape contents: !*aaaa*bbbb*cccc, Read head location: 13, ,
+TM: triplet, Current state: 4, Tape contents: !*aaaa*bbbb*cccc, Read head location: 14, ,
+TM: triplet, Current state: 4, Tape contents: !*aaaa*bbbb*cccc, Read head location: 15, ,
+TM: triplet, Current state: 4, Tape contents: !*aaaa*bbbb*cccc , Read head location: 16, ,
+TM: triplet, Current state: 5, Tape contents: !*aaaa*bbbb*cccc , Read head location: 15, ,
+TM: triplet, Current state: 5, Tape contents: !*aaaa*bbbb*cccc , Read head location: 14, ,
+TM: triplet, Current state: 5, Tape contents: !*aaaa*bbbb*cccc , Read head location: 13, ,
+TM: triplet, Current state: 5, Tape contents: !*aaaa*bbbb*cccc , Read head location: 12, ,
+TM: triplet, Current state: 5, Tape contents: !*aaaa*bbbb*cccc , Read head location: 11, ,
+TM: triplet, Current state: 5, Tape contents: !*aaaa*bbbb*cccc , Read head location: 10, ,
+TM: triplet, Current state: 5, Tape contents: !*aaaa*bbbb*cccc , Read head location: 9, ,
+TM: triplet, Current state: 5, Tape contents: !*aaaa*bbbb*cccc , Read head location: 8, ,
+TM: triplet, Current state: 5, Tape contents: !*aaaa*bbbb*cccc , Read head location: 7, ,
+TM: triplet, Current state: 5, Tape contents: !*aaaa*bbbb*cccc , Read head location: 6, ,
+TM: triplet, Current state: 5, Tape contents: !*aaaa*bbbb*cccc , Read head location: 5, ,
+TM: triplet, Current state: 5, Tape contents: !*aaaa*bbbb*cccc , Read head location: 4, ,
+TM: triplet, Current state: 5, Tape contents: !*aaaa*bbbb*cccc , Read head location: 3, ,
+TM: triplet, Current state: 5, Tape contents: !*aaaa*bbbb*cccc , Read head location: 2, ,
+TM: triplet, Current state: 5, Tape contents: !*aaaa*bbbb*cccc , Read head location: 1, ,
+TM: triplet, Current state: 5, Tape contents: !*aaaa*bbbb*cccc , Read head location: 0, ,
+TM: triplet, Current state: 1, Tape contents: !*aaaa*bbbb*cccc , Read head location: 1, ,
+TM: triplet, Current state: 1, Tape contents: !*aaaa*bbbb*cccc , Read head location: 2, ,
+TM: triplet, Current state: 2, Tape contents: !**aaa*bbbb*cccc , Read head location: 3, ,
+TM: triplet, Current state: 2, Tape contents: !**aaa*bbbb*cccc , Read head location: 4, ,
+TM: triplet, Current state: 2, Tape contents: !**aaa*bbbb*cccc , Read head location: 5, ,
+TM: triplet, Current state: 2, Tape contents: !**aaa*bbbb*cccc , Read head location: 6, ,
+TM: triplet, Current state: 2, Tape contents: !**aaa*bbbb*cccc , Read head location: 7, ,
+TM: triplet, Current state: 3, Tape contents: !**aaa**bbb*cccc , Read head location: 8, ,
+TM: triplet, Current state: 3, Tape contents: !**aaa**bbb*cccc , Read head location: 9, ,
+TM: triplet, Current state: 3, Tape contents: !**aaa**bbb*cccc , Read head location: 10, ,
+TM: triplet, Current state: 3, Tape contents: !**aaa**bbb*cccc , Read head location: 11, ,
+TM: triplet, Current state: 3, Tape contents: !**aaa**bbb*cccc , Read head location: 12, ,
+TM: triplet, Current state: 4, Tape contents: !**aaa**bbb**ccc , Read head location: 13, ,
+TM: triplet, Current state: 4, Tape contents: !**aaa**bbb**ccc , Read head location: 14, ,
+TM: triplet, Current state: 4, Tape contents: !**aaa**bbb**ccc , Read head location: 15, ,
+TM: triplet, Current state: 4, Tape contents: !**aaa**bbb**ccc , Read head location: 16, ,
+TM: triplet, Current state: 5, Tape contents: !**aaa**bbb**ccc , Read head location: 15, ,
+TM: triplet, Current state: 5, Tape contents: !**aaa**bbb**ccc , Read head location: 14, ,
+TM: triplet, Current state: 5, Tape contents: !**aaa**bbb**ccc , Read head location: 13, ,
+TM: triplet, Current state: 5, Tape contents: !**aaa**bbb**ccc , Read head location: 12, ,
+TM: triplet, Current state: 5, Tape contents: !**aaa**bbb**ccc , Read head location: 11, ,
+TM: triplet, Current state: 5, Tape contents: !**aaa**bbb**ccc , Read head location: 10, ,
+TM: triplet, Current state: 5, Tape contents: !**aaa**bbb**ccc , Read head location: 9, ,
+TM: triplet, Current state: 5, Tape contents: !**aaa**bbb**ccc , Read head location: 8, ,
+TM: triplet, Current state: 5, Tape contents: !**aaa**bbb**ccc , Read head location: 7, ,
+TM: triplet, Current state: 5, Tape contents: !**aaa**bbb**ccc , Read head location: 6, ,
+TM: triplet, Current state: 5, Tape contents: !**aaa**bbb**ccc , Read head location: 5, ,
+TM: triplet, Current state: 5, Tape contents: !**aaa**bbb**ccc , Read head location: 4, ,
+TM: triplet, Current state: 5, Tape contents: !**aaa**bbb**ccc , Read head location: 3, ,
+TM: triplet, Current state: 5, Tape contents: !**aaa**bbb**ccc , Read head location: 2, ,
+TM: triplet, Current state: 5, Tape contents: !**aaa**bbb**ccc , Read head location: 1, ,
+TM: triplet, Current state: 5, Tape contents: !**aaa**bbb**ccc , Read head location: 0, ,
+TM: triplet, Current state: 1, Tape contents: !**aaa**bbb**ccc , Read head location: 1, ,
+TM: triplet, Current state: 1, Tape contents: !**aaa**bbb**ccc , Read head location: 2, ,
+TM: triplet, Current state: 1, Tape contents: !**aaa**bbb**ccc , Read head location: 3, ,
+TM: triplet, Current state: 2, Tape contents: !***aa**bbb**ccc , Read head location: 4, ,
+TM: triplet, Current state: 2, Tape contents: !***aa**bbb**ccc , Read head location: 5, ,
+TM: triplet, Current state: 2, Tape contents: !***aa**bbb**ccc , Read head location: 6, ,
+TM: triplet, Current state: 2, Tape contents: !***aa**bbb**ccc , Read head location: 7, ,
+TM: triplet, Current state: 2, Tape contents: !***aa**bbb**ccc , Read head location: 8, ,
+TM: triplet, Current state: 3, Tape contents: !***aa***bb**ccc , Read head location: 9, ,
+TM: triplet, Current state: 3, Tape contents: !***aa***bb**ccc , Read head location: 10, ,
+TM: triplet, Current state: 3, Tape contents: !***aa***bb**ccc , Read head location: 11, ,
+TM: triplet, Current state: 3, Tape contents: !***aa***bb**ccc , Read head location: 12, ,
+TM: triplet, Current state: 3, Tape contents: !***aa***bb**ccc , Read head location: 13, ,
+TM: triplet, Current state: 4, Tape contents: !***aa***bb***cc , Read head location: 14, ,
+TM: triplet, Current state: 4, Tape contents: !***aa***bb***cc , Read head location: 15, ,
+TM: triplet, Current state: 4, Tape contents: !***aa***bb***cc , Read head location: 16, ,
+TM: triplet, Current state: 5, Tape contents: !***aa***bb***cc , Read head location: 15, ,
+TM: triplet, Current state: 5, Tape contents: !***aa***bb***cc , Read head location: 14, ,
+TM: triplet, Current state: 5, Tape contents: !***aa***bb***cc , Read head location: 13, ,
+TM: triplet, Current state: 5, Tape contents: !***aa***bb***cc , Read head location: 12, ,
+TM: triplet, Current state: 5, Tape contents: !***aa***bb***cc , Read head location: 11, ,
+TM: triplet, Current state: 5, Tape contents: !***aa***bb***cc , Read head location: 10, ,
+TM: triplet, Current state: 5, Tape contents: !***aa***bb***cc , Read head location: 9, ,
+TM: triplet, Current state: 5, Tape contents: !***aa***bb***cc , Read head location: 8, ,
+TM: triplet, Current state: 5, Tape contents: !***aa***bb***cc , Read head location: 7, ,
+TM: triplet, Current state: 5, Tape contents: !***aa***bb***cc , Read head location: 6, ,
+TM: triplet, Current state: 5, Tape contents: !***aa***bb***cc , Read head location: 5, ,
+TM: triplet, Current state: 5, Tape contents: !***aa***bb***cc , Read head location: 4, ,
+TM: triplet, Current state: 5, Tape contents: !***aa***bb***cc , Read head location: 3, ,
+TM: triplet, Current state: 5, Tape contents: !***aa***bb***cc , Read head location: 2, ,
+TM: triplet, Current state: 5, Tape contents: !***aa***bb***cc , Read head location: 1, ,
+TM: triplet, Current state: 5, Tape contents: !***aa***bb***cc , Read head location: 0, ,
+TM: triplet, Current state: 1, Tape contents: !***aa***bb***cc , Read head location: 1, ,
+TM: triplet, Current state: 1, Tape contents: !***aa***bb***cc , Read head location: 2, ,
+TM: triplet, Current state: 1, Tape contents: !***aa***bb***cc , Read head location: 3, ,
+TM: triplet, Current state: 1, Tape contents: !***aa***bb***cc , Read head location: 4, ,
+TM: triplet, Current state: 2, Tape contents: !****a***bb***cc , Read head location: 5, ,
+TM: triplet, Current state: 2, Tape contents: !****a***bb***cc , Read head location: 6, ,
+TM: triplet, Current state: 2, Tape contents: !****a***bb***cc , Read head location: 7, ,
+TM: triplet, Current state: 2, Tape contents: !****a***bb***cc , Read head location: 8, ,
+TM: triplet, Current state: 2, Tape contents: !****a***bb***cc , Read head location: 9, ,
+TM: triplet, Current state: 3, Tape contents: !****a****b***cc , Read head location: 10, ,
+TM: triplet, Current state: 3, Tape contents: !****a****b***cc , Read head location: 11, ,
+TM: triplet, Current state: 3, Tape contents: !****a****b***cc , Read head location: 12, ,
+TM: triplet, Current state: 3, Tape contents: !****a****b***cc , Read head location: 13, ,
+TM: triplet, Current state: 3, Tape contents: !****a****b***cc , Read head location: 14, ,
+TM: triplet, Current state: 4, Tape contents: !****a****b****c , Read head location: 15, ,
+TM: triplet, Current state: 4, Tape contents: !****a****b****c , Read head location: 16, ,
+TM: triplet, Current state: 5, Tape contents: !****a****b****c , Read head location: 15, ,
+TM: triplet, Current state: 5, Tape contents: !****a****b****c , Read head location: 14, ,
+TM: triplet, Current state: 5, Tape contents: !****a****b****c , Read head location: 13, ,
+TM: triplet, Current state: 5, Tape contents: !****a****b****c , Read head location: 12, ,
+TM: triplet, Current state: 5, Tape contents: !****a****b****c , Read head location: 11, ,
+TM: triplet, Current state: 5, Tape contents: !****a****b****c , Read head location: 10, ,
+TM: triplet, Current state: 5, Tape contents: !****a****b****c , Read head location: 9, ,
+TM: triplet, Current state: 5, Tape contents: !****a****b****c , Read head location: 8, ,
+TM: triplet, Current state: 5, Tape contents: !****a****b****c , Read head location: 7, ,
+TM: triplet, Current state: 5, Tape contents: !****a****b****c , Read head location: 6, ,
+TM: triplet, Current state: 5, Tape contents: !****a****b****c , Read head location: 5, ,
+TM: triplet, Current state: 5, Tape contents: !****a****b****c , Read head location: 4, ,
+TM: triplet, Current state: 5, Tape contents: !****a****b****c , Read head location: 3, ,
+TM: triplet, Current state: 5, Tape contents: !****a****b****c , Read head location: 2, ,
+TM: triplet, Current state: 5, Tape contents: !****a****b****c , Read head location: 1, ,
+TM: triplet, Current state: 5, Tape contents: !****a****b****c , Read head location: 0, ,
+TM: triplet, Current state: 1, Tape contents: !****a****b****c , Read head location: 1, ,
+TM: triplet, Current state: 1, Tape contents: !****a****b****c , Read head location: 2, ,
+TM: triplet, Current state: 1, Tape contents: !****a****b****c , Read head location: 3, ,
+TM: triplet, Current state: 1, Tape contents: !****a****b****c , Read head location: 4, ,
+TM: triplet, Current state: 1, Tape contents: !****a****b****c , Read head location: 5, ,
+TM: triplet, Current state: 2, Tape contents: !*********b****c , Read head location: 6, ,
+TM: triplet, Current state: 2, Tape contents: !*********b****c , Read head location: 7, ,
+TM: triplet, Current state: 2, Tape contents: !*********b****c , Read head location: 8, ,
+TM: triplet, Current state: 2, Tape contents: !*********b****c , Read head location: 9, ,
+TM: triplet, Current state: 2, Tape contents: !*********b****c , Read head location: 10, ,
+TM: triplet, Current state: 3, Tape contents: !**************c , Read head location: 11, ,
+TM: triplet, Current state: 3, Tape contents: !**************c , Read head location: 12, ,
+TM: triplet, Current state: 3, Tape contents: !**************c , Read head location: 13, ,
+TM: triplet, Current state: 3, Tape contents: !**************c , Read head location: 14, ,
+TM: triplet, Current state: 3, Tape contents: !**************c , Read head location: 15, ,
+TM: triplet, Current state: 4, Tape contents: !*************** , Read head location: 16, ,
+TM: triplet, Current state: 5, Tape contents: !*************** , Read head location: 15, ,
+TM: triplet, Current state: 5, Tape contents: !*************** , Read head location: 14, ,
+TM: triplet, Current state: 5, Tape contents: !*************** , Read head location: 13, ,
+TM: triplet, Current state: 5, Tape contents: !*************** , Read head location: 12, ,
+TM: triplet, Current state: 5, Tape contents: !*************** , Read head location: 11, ,
+TM: triplet, Current state: 5, Tape contents: !*************** , Read head location: 10, ,
+TM: triplet, Current state: 5, Tape contents: !*************** , Read head location: 9, ,
+TM: triplet, Current state: 5, Tape contents: !*************** , Read head location: 8, ,
+TM: triplet, Current state: 5, Tape contents: !*************** , Read head location: 7, ,
+TM: triplet, Current state: 5, Tape contents: !*************** , Read head location: 6, ,
+TM: triplet, Current state: 5, Tape contents: !*************** , Read head location: 5, ,
+TM: triplet, Current state: 5, Tape contents: !*************** , Read head location: 4, ,
+TM: triplet, Current state: 5, Tape contents: !*************** , Read head location: 3, ,
+TM: triplet, Current state: 5, Tape contents: !*************** , Read head location: 2, ,
+TM: triplet, Current state: 5, Tape contents: !*************** , Read head location: 1, ,
+TM: triplet, Current state: 5, Tape contents: !*************** , Read head location: 0, ,
+TM: triplet, Current state: 1, Tape contents: !*************** , Read head location: 1, ,
+TM: triplet, Current state: 1, Tape contents: !*************** , Read head location: 2, ,
+TM: triplet, Current state: 1, Tape contents: !*************** , Read head location: 3, ,
+TM: triplet, Current state: 1, Tape contents: !*************** , Read head location: 4, ,
+TM: triplet, Current state: 1, Tape contents: !*************** , Read head location: 5, ,
+TM: triplet, Current state: 1, Tape contents: !*************** , Read head location: 6, ,
+TM: triplet, Current state: 1, Tape contents: !*************** , Read head location: 7, ,
+TM: triplet, Current state: 1, Tape contents: !*************** , Read head location: 8, ,
+TM: triplet, Current state: 1, Tape contents: !*************** , Read head location: 9, ,
+TM: triplet, Current state: 1, Tape contents: !*************** , Read head location: 10, ,
+TM: triplet, Current state: 1, Tape contents: !*************** , Read head location: 11, ,
+TM: triplet, Current state: 1, Tape contents: !*************** , Read head location: 12, ,
+TM: triplet, Current state: 1, Tape contents: !*************** , Read head location: 13, ,
+TM: triplet, Current state: 1, Tape contents: !*************** , Read head location: 14, ,
+TM: triplet, Current state: 1, Tape contents: !*************** , Read head location: 15, ,
+TM: triplet, Current state: 1, Tape contents: !*************** , Read head location: 16, ,
+TM: triplet, Current state: 6, Tape contents: !***************  , Read head location: 17, ]
+
+
+
+
+accepting and accepts Test:
+Turing machine:           triplet
+Current state:            6
+Tape contents:            ['!', '*', '*', '*', '*', '*', '*', '*', '*', '*', '*', '*', '*', '*', '*', '*', ' ']
+Read head location:       17
+
+
+
+True
+
+
+PS E:\SCHOOL FALL 2022\Theory of Computation\project-1\mmaster> 
